@@ -70,6 +70,24 @@ public class Main {
         if(wasCar)
             System.out.println("wasCar is true");
 
+        /* Challenge Question
+        1. Create a double variable with the value 20
+        2. Create a second variable of type double with the value 80
+        3. add both numbers up and multiply by 25
+        4. Use the remainder operator to figure out the remainder from the sum of
+           #3 divided by 40
+        5. write an "if" statement that displays a message "Total was over the limit"
+           if the remaining total (#4) is equal to 20 or less.
+        */
+
+        double doubleVar1 = 20d;
+        double doubleVar2 = 80d;
+        double doubleVarTotal = (doubleVar1 + doubleVar2)*25;
+        double remainder = doubleVarTotal % 40;
+        System.out.println("Total = " + doubleVarTotal);
+        System.out.println("Remainder = " + remainder);
+        if(remainder <= 20)
+            System.out.println("Total was over the limit");
 
     }
 }
