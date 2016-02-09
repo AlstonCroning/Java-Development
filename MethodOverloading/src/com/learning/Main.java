@@ -56,27 +56,6 @@ public class Main {
         return calcFeetAndInchesToCentimeters(feet,remainingInches);
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public static int calculateScore(String playerName, int score) {
         System.out.println("player " + playerName + " scored " + score
         + " points");
@@ -93,6 +72,5 @@ public class Main {
         System.out.println("no player name, no player score.");
         return 0;
     }
-
 
 }
