@@ -8,26 +8,35 @@ public class Main {
         calculateScore(75);
         calculateScore();
 
+        //testing the method using feet and inches parameters
         double centimeters = calcFeetAndInchesToCentimeters(6,-1);
 
+        //validating centimeters
         if(centimeters < 0.0)
         {
             System.out.println("Invalid Parameters");
         }
-    }
+
+        //using the method using inches parameter
+        calcFeetAndInchesToCentimeters(156);//final result
+
+    }//end of MAIN method
 
 
     public static double calcFeetAndInchesToCentimeters(double feet,double inches) {
 
-        //calculating cm
+        //validating feet and inches
         if(feet < 0 || ( (inches < 0) || (inches > 12) ))
         {
             System.out.println("Invalid Feet or Inches Parameters!");
             return -1;
         }
 
+        //calculating cm with feet component
         double centimeters = (feet * 12) * 2.54;
+        //calculating cm with inches component and appending previous cm value
         centimeters += inches * 2.54;
+
         System.out.println(feet + "feet, " + inches + "inches = " + centimeters + "cm");
         return centimeters;
     }
@@ -35,21 +44,34 @@ public class Main {
 
     public static double calcFeetAndInchesToCentimeters(double inches) {
 
-        double cm;
-        double feet;
-
-        //calculating feet
-        if(inches >= 0)
-        {
-            cm = inches * 2.54; //converted to cm
-            feet = cm * 0.032808;//converted to feet
-            return feet;
-        }
-        else
+        //validating inches
+        if(inches < 0)
         {
             return -1;
         }
+
+        double feet = (int) inches/12;
+        double remainingInches = (int) inches % 12;
+        System.out.println(inches + " inches is equal to " + feet + " feet and " +remainingInches + " inches");
+        return calcFeetAndInchesToCentimeters(feet,remainingInches);
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
