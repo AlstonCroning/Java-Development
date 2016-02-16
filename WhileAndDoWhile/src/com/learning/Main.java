@@ -28,5 +28,37 @@ public class Main {
             count++;
         } while (count != 6);
 
+        //Finding an Even number Challenge with a help from while loop and a method
+        int number = 5;
+        int finishNumber = 20;
+        int TotalEvenNumbers = 0;
+        while(number <= finishNumber) {
+
+            if(!isEvenNumber(number)) {
+                number++;
+                continue;
+            }
+
+            System.out.println("Even number " + number);
+            number++;
+
+            TotalEvenNumbers++;
+            if(TotalEvenNumbers == 5) {
+                break;
+            }
+        }//end of while
+
+        System.out.println("Even numbers Found are " + TotalEvenNumbers);
+
+    }//end of main
+
+    public static boolean isEvenNumber(int number) {
+
+        if((number % 2) == 0){
+            return true;
+        } else {
+            return false;
+        }
     }
+
 }
