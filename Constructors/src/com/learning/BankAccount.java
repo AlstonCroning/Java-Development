@@ -8,6 +8,34 @@ public class BankAccount {
     private String email;
     private String phoneNumber;
 
+    public BankAccount() {
+        System.out.println("Empty constructor called");
+    }
+
+
+    //Deposit Money
+    public void deposit (double deposit) {
+        this.balence += deposit;
+        System.out.println(
+                "Balence = $" + this.balence +
+                        ", Money Deposited = $" + deposit
+        );
+    }
+
+    public double withDraw (double withDraw) {
+
+        if(this.balence < withDraw){
+            System.out.println("Insufficient Funds");
+            return -1;
+        } else {
+            this.balence -= withDraw;//deducting balence from the withDraw
+            System.out.println(
+                    "Balence = $" + this.balence +
+                            ", Amount WithDrawn = $" + withDraw);
+            return 0;
+        }
+    }
+
     //Acount Number (Setter)
     public void setActNumber (int actNumber) {
         this.actNumber = actNumber;
@@ -55,30 +83,6 @@ public class BankAccount {
     //CustomerName (getter)
     public String getPhoneNumber () {
         return this.phoneNumber;
-    }
-
-
-    //Deposit Money
-    public void deposit (double deposit) {
-        this.balence += deposit;
-        System.out.println(
-                "Balence = $" + this.balence +
-                ", Money Deposited = $" + deposit
-        );
-    }
-
-    public double withDraw (double withDraw) {
-
-        if(this.balence < withDraw){
-            System.out.println("Insufficient Funds");
-            return -1;
-        } else {
-            this.balence -= withDraw;//deducting balence from the withDraw
-            System.out.println(
-                    "Balence = $" + balence +
-                    ", Amount WithDrawn = $" + withDraw);
-            return 0;
-        }
     }
 
 
