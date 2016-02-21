@@ -8,20 +8,42 @@ public class BankAccount {
     private String email;
     private String phoneNumber;
 
+    //default constructor
     public BankAccount() {
+        this(56789,2.50,"Default name","Default Address","Default Phone");
         System.out.println("Empty constructor called");
     }
 
+    //Major Constructor (updates all fields)
+    public BankAccount(int actNumber, double balence, String customerName,
+                            String email,String phoneNumber) {
+        System.out.println("Account Constructor with parameters called");
+        this.actNumber = actNumber;
+        //setActNumber(actNumber);//alternative way of performing the same task
 
-    //Deposit Money
+        this.balence = balence;
+        this.customerName = customerName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
+
+    public BankAccount(String customerName, String email, String phoneNumber) {
+        this(99999,100.55,customerName,email,phoneNumber);
+//        this.customerName = customerName;
+//        this.email = email;
+//        this.phoneNumber = phoneNumber;
+    }
+
+    //Deposit method
     public void deposit (double deposit) {
         this.balence += deposit;
         System.out.println(
                 "Balence = $" + this.balence +
-                        ", Money Deposited = $" + deposit
+                    ", Money Deposited = $" + deposit
         );
     }
 
+    //withdraw method
     public double withDraw (double withDraw) {
 
         if(this.balence < withDraw){
