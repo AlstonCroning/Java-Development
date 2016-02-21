@@ -22,6 +22,27 @@ public class Main {
         BankAccount CIBC = new BankAccount("Tim","tim@email.com","12345");
         System.out.println(CIBC.getActNumber() + " name " + CIBC.getCustomerName());
 
+        System.out.println("\n*********Challenge Question************\n");
+
+        //Default Constructor called
+        VipCustomer vipDishan = new VipCustomer();
+        System.out.println("Name: " + vipDishan.getName());
+        System.out.println("Email: " + vipDishan.getEmailAddress());
+        System.out.println("Credit Limit = $" + vipDishan.getCreditLimit() + "\n");
+
+        //Secondary Constructor Called
+        VipCustomer vipTim = new VipCustomer("Tim","tim@email.com");
+        System.out.println("Name: " + vipTim.getName());
+        System.out.println("Email: " + vipTim.getEmailAddress());
+        System.out.println("Credit Limit = $" + vipTim.getCreditLimit() + "\n");
+
+        //Main Constructor Called
+        VipCustomer vipNirosh = new VipCustomer("Nirosh",500,"nirosh@email.com");
+        System.out.println("Name: " + vipNirosh.getName());
+        System.out.println("Email: " + vipNirosh.getEmailAddress());
+        System.out.println("Credit Limit = $" + vipNirosh.getCreditLimit() + "\n");
+
+
 
 /*      //Using Setters and Getters without a constructor
 
