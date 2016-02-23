@@ -17,7 +17,11 @@ public class Main {
         //Deposit and Withdraw
         TD.deposit(200);//money deposited test
         TD.withDraw(100);//money withDrown test
+        //TD.withDraw(102.5);//all money withDrown test
         TD.withDraw(5101);//insufficient funds test
+
+
+
 
         BankAccount CIBC = new BankAccount("Tim","tim@email.com","12345");
         System.out.println(CIBC.getActNumber() + " name " + CIBC.getCustomerName());
@@ -41,6 +45,7 @@ public class Main {
         System.out.println("Name: " + vipNirosh.getName());
         System.out.println("Email: " + vipNirosh.getEmailAddress());
         System.out.println("Credit Limit = $" + vipNirosh.getCreditLimit() + "\n");
+
 
 
 
