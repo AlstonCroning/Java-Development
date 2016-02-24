@@ -21,4 +21,17 @@ public class Dog extends Animal{
         this.teeth = teeth;
         this.coat = coat;
     }
+
+    //unique to Dogs
+    private void chew() {
+        System.out.println("Dog.chew() called");
+    }
+
+    //we're overiding a method that is in the super class 'Animal'
+    @Override
+    public void eat() {
+        System.out.println("Dog.eat() called");
+        chew();
+        super.eat();
+    }
 }
