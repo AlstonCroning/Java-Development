@@ -22,7 +22,7 @@ public class Dog extends Animal{
         this.coat = coat;
     }
 
-    //unique to Dogs
+    //unique to Dogs (how dogs eat)
     private void chew() {
         System.out.println("Dog.chew() called");
     }
@@ -33,5 +33,31 @@ public class Dog extends Animal{
         System.out.println("Dog.eat() called");
         chew();
         super.eat();
+    }
+
+    //unique to Dogs (how dogs walk)
+    public void walk() {
+        System.out.println("dog.walk() called");
+        //move(5);
+        super.move(5);
+    }
+
+    //unique to Dogs (how dogs run)
+    public void run() {
+        System.out.println("dog.run() called");
+        move(10);
+    }
+
+    //unique to dogs (how dogs moveLegs)
+    private void moveLegs(int speed) {
+        System.out.println("Dog.moveLegs() called");
+    }
+
+    //overriding move method
+    @Override
+    public void move(int speed) {
+        System.out.println("Dog.move() called");
+        moveLegs(speed);
+        super.move(speed);
     }
 }
