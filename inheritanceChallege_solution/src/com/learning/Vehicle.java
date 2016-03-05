@@ -28,6 +28,7 @@ public class Vehicle {
                 currentVelocity + " in direction " + currentDirection);
     }
 
+
     public String getName() {
         return name;
     }
@@ -43,4 +44,10 @@ public class Vehicle {
     public int getCurrentDirection() {
         return currentDirection;
     }
+
+
+    public void stop() {
+        this.currentVelocity = 0;
+    }
+
 }
