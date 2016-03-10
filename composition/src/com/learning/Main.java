@@ -19,5 +19,35 @@ public class Main {
         PC thePC = new PC(theCase,themonitor,theMotherboard);
         thePC.powerUp();
 
+        //Challenge Question
+        Dimensions dimensions1 = new Dimensions(1500,2000,1500);
+        BookRack bookRack = new BookRack();
+        Bedroom bedroom = new Bedroom(false,false,dimensions1,bookRack);
+
+        System.out.println("Width = " + bedroom.getDimensions().getWidth());
+        System.out.println("Height = " +bedroom.getDimensions().getHeight());
+        System.out.println("Depth = " +bedroom.getDimensions().getDepth());
+        bedroom.doorStatus(true);
+        System.out.println(bedroom.isDoors());
+        bedroom.doorStatus(false);
+        System.out.println(bedroom.isDoors());
+        bedroom.lightStatus(true);
+        System.out.println(bedroom.isLights());
+        bedroom.lightStatus(false);
+        System.out.println(bedroom.isLights());
+
+
+        bedroom.getBookRack().chooseBook(1);
+        System.out.println(bedroom.getBookRack().getBook1());
+
+        bedroom.getBookRack().chooseBook(2);
+        System.out.println(bedroom.getBookRack().getBook2());
+
+        bedroom.getBookRack().chooseBook(3);
+        System.out.println(bedroom.getBookRack().getBook3());
+
+        bedroom.getBookRack().chooseBook(4);
+        System.out.println(bedroom.getBookRack().getBook4());
+
     }
 }
