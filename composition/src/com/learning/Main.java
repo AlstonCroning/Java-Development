@@ -22,7 +22,9 @@ public class Main {
         //Challenge Question
         Dimensions dimensions1 = new Dimensions(1500,2000,1500);
         BookRack bookRack = new BookRack();
-        Bedroom bedroom = new Bedroom(false,false,dimensions1,bookRack);
+        Bed bed = new Bed(2,2,1);
+        Bedroom bedroom = new Bedroom(false,false,dimensions1,bookRack,bed);
+
 
         System.out.println("Width = " + bedroom.getDimensions().getWidth());
         System.out.println("Height = " +bedroom.getDimensions().getHeight());
@@ -36,18 +38,18 @@ public class Main {
         bedroom.lightStatus(false);
         System.out.println(bedroom.isLights());
 
-
         bedroom.getBookRack().chooseBook(1);
         System.out.println(bedroom.getBookRack().getBook1());
-
         bedroom.getBookRack().chooseBook(2);
         System.out.println(bedroom.getBookRack().getBook2());
-
         bedroom.getBookRack().chooseBook(3);
         System.out.println(bedroom.getBookRack().getBook3());
-
         bedroom.getBookRack().chooseBook(4);
         System.out.println(bedroom.getBookRack().getBook4());
+
+        bedroom.getBed().sleep();
+        bedroom.getBed().wakeUp();
+
 
     }
 }

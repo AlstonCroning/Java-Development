@@ -5,13 +5,15 @@ public class Bedroom {
     private boolean doors;
     private Dimensions dimensions;
     private BookRack bookRack;
+    private Bed bed;
 
     //constructor
-    public Bedroom(boolean lights, boolean doors, Dimensions dimensions,BookRack bookRack) {
+    public Bedroom(boolean lights, boolean doors, Dimensions dimensions,BookRack bookRack,Bed bed) {
         this.lights = lights;
         this.doors = doors;
         this.dimensions = dimensions;
         this.bookRack = bookRack;
+        this.bed = bed;
     }
 
     //methods
@@ -57,5 +59,9 @@ public class Bedroom {
 
     public BookRack getBookRack() {
         return bookRack;
+    }
+
+    public Bed getBed() {
+        return bed;
     }
 }
