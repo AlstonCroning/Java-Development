@@ -8,6 +8,7 @@ public class Account {
     private String phone;
 
     public Account() {
+        this(56789,2.50,"Default name","Default email","default phone");
         System.out.println("Empty Constructor Called");
     }
 
@@ -20,6 +21,9 @@ public class Account {
         this.phone = phone;
     }
 
+    public Account(String customer, String email, String phone) {
+        this(99999,100.55,customer,email,phone);
+    }
 
     //methods
     public void depositFunds(double funds) {
