@@ -34,19 +34,19 @@ public class Vehicle {
     public void handleSteering(String direction) {
         switch (direction.toLowerCase()) {
             case "forward":
-                System.out.println("Vehicle is going forward");
+                System.out.println("Vehicle is steering forward");
                 break;
             case "left":
-                System.out.println("Vehicle is going left");
+                System.out.println("Vehicle is steering left");
                 break;
             case "right":
-                System.out.println("Vehicle is going right");
+                System.out.println("Vehicle is steering right");
                 break;
             case "reverse":
-                System.out.println("Vehicle is going reverse");
+                System.out.println("Vehicle is steering reverse");
                 break;
             default:
-                System.out.println("Incorrect Direction");
+                System.out.println("Unknown direction");
                 break;
         }
     }
