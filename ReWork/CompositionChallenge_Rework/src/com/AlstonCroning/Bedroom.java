@@ -29,4 +29,8 @@ public class Bedroom {
     public void useDoor(boolean openClose) {
         door.useDoor(openClose);
     }
+
+    public Lamp getLamp() {
+        return lamp;
+    }
 }

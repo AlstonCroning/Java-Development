@@ -18,5 +18,6 @@ public class Main {
         Bedroom bedroom = new Bedroom("Dishan's Room",dimensions,bed,lamp,door,
                 window,wall1,wall2, wall3,wall4);
         bedroom.useDoor(true);
+        bedroom.getLamp().useSwitch(true);
     }
 }
