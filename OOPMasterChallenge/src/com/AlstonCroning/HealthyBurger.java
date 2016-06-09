@@ -15,10 +15,12 @@ public class HealthyBurger extends Burger{
     //two extra additions for healthy burger only
     private void addGreenPepper() {
         this.totalPrice += greenPepperPrice;
+        setTotalPrice(this.totalPrice);
     }
 
     private void addCarrots() {
         this.totalPrice += carrotsPrice;
+        setTotalPrice(this.totalPrice);
     }
 
 
