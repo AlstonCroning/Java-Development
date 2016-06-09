@@ -40,7 +40,6 @@ public class Burger {
         this.totalPrice += redPepperPrice;
     }
 
-
     //getters
     public String getMeatType() {
         return meatType;
