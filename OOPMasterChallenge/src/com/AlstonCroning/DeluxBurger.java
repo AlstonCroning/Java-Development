@@ -14,16 +14,15 @@ public class DeluxBurger extends Burger{
 
 
     //only two additions allowed
-    private void addChips() {
-        this.totalPrice += chipsPrice;
+    public void addChips() {
+        this.totalPrice = getTotalPrice() + chipsPrice;
         setTotalPrice(this.totalPrice);
     }
 
-    private void addDrinks() {
-        this.totalPrice += drinksPrice;
+    public void addDrinks() {
+        this.totalPrice = getTotalPrice() + drinksPrice;
         setTotalPrice(this.totalPrice);
     }
-
 
     //getters
     public double getChipsPrice() {
