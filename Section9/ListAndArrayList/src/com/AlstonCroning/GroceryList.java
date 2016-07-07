@@ -3,7 +3,6 @@ package com.AlstonCroning;
 import java.util.ArrayList;
 
 public class GroceryList {
-    private int[] mynumbers;
     private ArrayList<String> groceryList = new ArrayList<String>();
 
     public void addGroceryItem(String item) {
@@ -29,14 +28,11 @@ public class GroceryList {
 
     public String findItem(String searchItem) {
         //short cut for determining if an item exist in an arrayList
-//        boolean exists = groceryList.contains(searchItem);
+        //boolean exists = groceryList.contains(searchItem);
         int position = groceryList.indexOf(searchItem);
         if(position >= 0){
             return groceryList.get(position);
         }
         return null;
     }
-
-
-
 }
